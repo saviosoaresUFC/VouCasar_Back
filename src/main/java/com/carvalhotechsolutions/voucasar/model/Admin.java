@@ -12,7 +12,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Administrator extends Usuario {
+public class Admin extends User {
 
     @Column(nullable = false)
     private String name;

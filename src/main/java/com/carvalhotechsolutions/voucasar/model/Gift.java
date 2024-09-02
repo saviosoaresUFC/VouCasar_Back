@@ -1,6 +1,6 @@
 package com.carvalhotechsolutions.voucasar.model;
 
-import com.carvalhotechsolutions.voucasar.model.enums.Categoria;
+import com.carvalhotechsolutions.voucasar.model.enums.Category;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -14,25 +14,25 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Presente {
+public class Gift {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(unique = true, nullable = false)
-    private String nome;
+    private String name;
 
     @Enumerated(EnumType.STRING)
-    private Categoria categoria;
+    private Category category;
 
-    private String descricao;
+    private String description;
 
-    private String url_imagem;
+    private String url_image;
 
-    @ManyToMany(mappedBy = "presentes")
-    private List<Casal> casais;
+    @ManyToMany(mappedBy = "gifts")
+    private List<Couple> couples;
 
-    private boolean reservado;
+    private boolean reserved;
 
 }

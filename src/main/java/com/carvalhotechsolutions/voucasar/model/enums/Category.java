@@ -1,6 +1,6 @@
 package com.carvalhotechsolutions.voucasar.model.enums;
 
-public enum Categoria {
+public enum Category {
     COZINHA,
     QUARTO,
     BANHEIRO,

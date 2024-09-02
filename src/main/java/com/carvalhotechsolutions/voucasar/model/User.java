@@ -4,7 +4,7 @@ import com.carvalhotechsolutions.voucasar.model.enums.Role;
 import jakarta.persistence.*;
 
 @MappedSuperclass
-public abstract class Usuario {
+public abstract class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

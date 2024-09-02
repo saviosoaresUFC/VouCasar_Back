@@ -1,6 +1,6 @@
 package com.carvalhotechsolutions.voucasar.model.enums;
 
-public enum PreferenciaCores {
+public enum ColorPreference {
     CINZA,
     AMARELO,
     BRANCO,

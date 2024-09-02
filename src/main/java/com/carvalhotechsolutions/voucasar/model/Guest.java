@@ -13,16 +13,16 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
-public class Convidado extends Usuario {
+public class Guest extends User {
 
     @Column(unique=true, nullable = false)
-    private String nome;
+    private String name;
 
     @OneToMany
-    private List<Presente> presentes_reservados;
+    private List<Gift> reserved_gifts;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    private Casal casal;
+    private Couple couple;
 
 
 }
