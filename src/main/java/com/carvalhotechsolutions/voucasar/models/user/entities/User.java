@@ -1,4 +1,4 @@
-package com.carvalhotechsolutions.voucasar.models.user;
+package com.carvalhotechsolutions.voucasar.models.user.entities;
 
 import com.carvalhotechsolutions.voucasar.enums.UserRole;
 import jakarta.persistence.*;
@@ -14,12 +14,14 @@ import java.util.Collection;
 import java.util.List;
 import java.util.UUID;
 
-@Entity
 @Table(name = "tb_users")
 @Getter
 @Setter
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "user_type")
 @NoArgsConstructor
 @AllArgsConstructor
+@Entity
 public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
@@ -27,6 +29,8 @@ public class User implements UserDetails {
 
     private String email;
     private String password;
+
+    @Enumerated(EnumType.STRING)
     private UserRole role;
 
     public User(String email, String password, UserRole role) {

@@ -2,6 +2,7 @@ package com.carvalhotechsolutions.voucasar.controllers;
 
 import com.carvalhotechsolutions.voucasar.infra.security.TokenService;
 import com.carvalhotechsolutions.voucasar.models.user.*;
+import com.carvalhotechsolutions.voucasar.models.user.entities.User;
 import com.carvalhotechsolutions.voucasar.repositories.UserRepository;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

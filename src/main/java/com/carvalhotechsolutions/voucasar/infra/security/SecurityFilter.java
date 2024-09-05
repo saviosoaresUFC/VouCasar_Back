@@ -1,6 +1,6 @@
 package com.carvalhotechsolutions.voucasar.infra.security;
 
-import com.carvalhotechsolutions.voucasar.models.user.User;
+import com.carvalhotechsolutions.voucasar.models.user.entities.User;
 import com.carvalhotechsolutions.voucasar.repositories.UserRepository;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
